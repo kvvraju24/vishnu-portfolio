@@ -1,4 +1,4 @@
-# Vishnu— Portfolio
+# Vishnu — Portfolio
 
 Personal portfolio for **Koneti Vishnuvardhan Raju** — CSE student at Lovely Professional University, heading toward data science.
 
