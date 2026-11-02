@@ -2,26 +2,19 @@
 
 Personal portfolio for **Koneti Vishnuvardhan Raju** — a computer science student at Lovely Professional University, heading toward a career in data science.
 
-## Project idea
+## Design
 
-This portfolio is designed like a working notebook rather than a generic tech template: warm paper and ink in light mode, and chalkboard styling in dark mode. The theme follows the system preference automatically.
+A clean, editorial look built for a data-science portfolio: warm off-white and ink in light mode, deep graphite with periwinkle and mint accents in dark mode. It follows the system theme by default, and the sun/moon button in the header lets visitors switch (their choice is remembered). Type is Geist for text, Geist Mono for labels and Instrument Serif italics for accents.
 
-## Latest updates
+## What's on the page
 
-- Education and certifications now live in a two-tab journey section.
-- Education uses a dotted vertical timeline.
-- Certificates use a touch-friendly accordion layout.
-- Category filters let you view Programming, Soft skills, or Industry items.
-- Each certificate with a real image opens in a full-screen lightbox.
-- The hero section is simplified to a single focused column with the photo, intro, and call-to-action buttons.
+- **Hero** — intro, CV download, profile links and a headline result from Salevora.
+- **Selected work** — Salevora (featured, with live demo), FitAI, ResolveDesk, Nutryxen, and the Student Performance Analyzer with its interactive chart.
+- **About** — background, what I'm learning now, and tabbed skill groups.
+- **Journey** — education timeline plus a filterable certificate accordion with a full-screen image viewer.
+- **Contact** — email (with copy button), GitHub, LinkedIn and résumé.
 
-## What changed from v1
-
-- Removed filler projects unrelated to the current direction.
-- Reframed the work section around one real project and honest learning goals.
-- Added certificates as verifiable portfolio evidence.
-- Updated the visual identity with a warm paper/chalkboard look.
-- Kept the portfolio personal and content-first.
+Sections fade in as you scroll, and all motion is disabled for visitors who prefer reduced motion.
 
 ## Project structure
 
@@ -33,6 +26,11 @@ This is a static website. The folder name on your Mac can be anything, but the p
 ├── styles.css
 ├── app.js
 ├── vishnu-raju-cv.pdf
+├── cv/
+│   ├── cv.html          # source of the CV PDF
+│   └── build-cv.js      # rebuilds vishnu-raju-cv.pdf
+├── projects/
+│   └── salevora.jpg
 ├── profile/
 │   └── profile-photo.jpg
 ├── certificates/
@@ -81,6 +79,17 @@ This is a fully static portfolio, so you can publish it anywhere that serves sta
 - No build command is required.
 
 > Renaming the local folder on your Mac does not affect the live site. The important thing is that the deployed project contains `index.html` and the static assets in the correct structure.
+
+## Updating the CV
+
+The downloadable `vishnu-raju-cv.pdf` is generated from `cv/cv.html`. Edit the HTML, then rebuild:
+
+```bash
+npm i -D playwright && npx playwright install chromium
+node cv/build-cv.js
+```
+
+You can also replace `vishnu-raju-cv.pdf` with any PDF you export yourself — keep the same file name so the download buttons keep working.
 
 ## Editing certificates
 

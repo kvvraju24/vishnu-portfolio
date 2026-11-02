@@ -1,5 +1,60 @@
 'use strict';
 
+document.documentElement.classList.add('js');
+
+/* ============================================================
+   Theme toggle (light / dark), remembered per visitor
+   ============================================================ */
+(function setupTheme() {
+  const root = document.documentElement;
+  const btn = document.querySelector('.theme-toggle');
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  const current = () => root.dataset.theme || (media.matches ? 'dark' : 'light');
+  function label() {
+    btn?.setAttribute('aria-label', current() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  btn?.addEventListener('click', () => {
+    const next = current() === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) { /* storage unavailable */ }
+    label();
+  });
+  media.addEventListener?.('change', label);
+  label();
+})();
+
+/* ============================================================
+   Header border on scroll + footer year
+   ============================================================ */
+const header = document.querySelector('.site-header');
+const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 8);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+/* ============================================================
+   Reveal sections as they scroll into view
+   ============================================================ */
+(function setupReveal() {
+  const items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach((el) => el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+  );
+  items.forEach((el) => io.observe(el));
+})();
+
 /* ============================================================
    Mobile nav
    ============================================================ */
@@ -175,7 +230,10 @@ document.querySelectorAll('[role="tablist"]').forEach((list) => {
   }
   filterButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filterButtons.forEach((b) => b.classList.toggle('active', b === btn));
+      filterButtons.forEach((b) => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-pressed', String(b === btn));
+      });
       applyFilter(btn.dataset.filter);
     });
   });

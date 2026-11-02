@@ -3,13 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f7f4ec">
-<meta name="description" content="VISHNU — Computer Science student at LPU and aspiring data scientist. Explore projects and verified certifications.">
-<title>VISHNU</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%A9%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#f5f4f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0c10" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Koneti Vishnuvardhan Raju (Vishnu) — CSE student at LPU building machine-learning and data products: sales forecasting, nutrition tracking, ticket triage and analytics dashboards.">
+<meta property="og:title" content="Vishnu — Data &amp; ML portfolio">
+<meta property="og:description" content="Forecasting models, dashboards and full-stack apps by Koneti Vishnuvardhan Raju.">
+<meta property="og:image" content="projects/salevora.jpg">
+<title>Vishnu · Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2314161b'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='18' fill='%238ea2ff'%3Ev%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,500..600&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script>
+  /* apply saved theme before paint to avoid a flash */
+  try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 <link rel="stylesheet" href="styles.css">
 <script src="app.js" defer></script>
 </head>
@@ -17,10 +25,10 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="#home" aria-label="VISHNU, home">
-      <span class="brand-mark">vr</span>
-      <span class="brand-name">VISHNU</span>
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="Vishnu, home">
+      <span class="brand-mark" aria-hidden="true">v</span>
+      <span class="brand-name">Vishnu<span class="brand-dot">.</span></span>
     </a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#work">Work</a>
@@ -29,127 +37,239 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-actions">
-      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">☰</button>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="btn btn-small btn-ghost header-cv" href="vishnu-raju-cv.pdf" download>Résumé</a>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact">Contact</a>
+    <a href="vishnu-raju-cv.pdf" download>Download résumé</a>
+  </nav>
 </header>
-
-<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
-  <a href="#work">Work</a>
-  <a href="#about">About</a>
-  <a href="#journey">Journey</a>
-  <a href="#contact">Contact</a>
-</nav>
 
 <main id="main">
 
 <!-- ============ HERO ============ -->
 <section class="hero wrap" id="home">
-  <div class="hero-copy">
-    <div class="pin-photo">
-      <span class="tape" aria-hidden="true"></span>
-      <span class="frame">
-        <img src="profile/profile-photo.jpg" alt="VISHNU">
-      </span>
-    </div>
-    <p class="hero-kicker">Computer science student, LPU · Punjab, India</p>
+  <div class="hero-copy reveal">
+    <p class="kicker"><span class="pulse" aria-hidden="true"></span>B.Tech CSE · LPU, Punjab</p>
     <h1>
-      <span class="full">KONETI VISHNUVARDHAN RAJU</span>
-      VISHNU
+      <span class="hero-name">Koneti Vishnuvardhan Raju</span>
+      I build <em>data products</em> that turn raw numbers into decisions.
     </h1>
-    <p class="hero-tagline">I like problems more than formulas.</p>
-    <p class="hero-desc">Third-year CSE student sharpening the fundamentals I skipped early on — with a head start in the part most people find hardest: thinking through a problem before writing a line of code. Headed toward a career in data science.</p>
+    <p class="hero-desc">Third-year computer science student heading into data science. I like problems more than formulas — so I learn by shipping: forecasting models, explainable ML, and the dashboards and apps that put them in front of people.</p>
     <div class="hero-actions">
-      <a class="btn btn-solid" href="#work">See my work</a>
-      <a class="btn btn-pen" href="vishnu-raju-cv.pdf" download>Download CV</a>
+      <a class="btn btn-solid" href="#work">View projects <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="vishnu-raju-cv.pdf" download>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
+        Download CV
+      </a>
     </div>
-    <div class="hero-meta">
-      <span>B.Tech CSE · 3rd year</span>
-      <span>Aiming for data scientist</span>
+    <ul class="hero-links" aria-label="Profiles">
+      <li><a href="https://github.com/kvvraju24" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/kvvraju24" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="mailto:kvvraju24@gmail.com">kvvraju24@gmail.com</a></li>
+    </ul>
+  </div>
+
+  <div class="hero-visual reveal">
+    <div class="portrait">
+      <img src="profile/profile-photo.jpg" alt="Portrait of Koneti Vishnuvardhan Raju" width="440" height="520">
+    </div>
+    <div class="float-card float-a">
+      <span class="fc-label">Salevora · holdout WAPE</span>
+      <span class="fc-value">9.09<small>%</small></span>
+      <span class="fc-note">beats baseline on every metric</span>
+    </div>
+    <div class="float-card float-b">
+      <span class="fc-label">Based in</span>
+      <span class="fc-value fc-sm">Punjab, India</span>
     </div>
   </div>
 </section>
 
+<!-- ============ STATS ============ -->
+<section class="wrap stats reveal" aria-label="At a glance">
+  <div class="stat"><span class="stat-num">1M+</span><span class="stat-label">daily sales records modelled</span></div>
+  <div class="stat"><span class="stat-num">5</span><span class="stat-label">projects built end to end</span></div>
+  <div class="stat"><span class="stat-num">191</span><span class="stat-label">backend tests in FitAI</span></div>
+  <div class="stat"><span class="stat-num">8</span><span class="stat-label">verified certifications</span></div>
+</section>
+
 <!-- ============ WORK ============ -->
 <section class="section wrap" id="work">
-  <div class="section-head">
-    <p class="eyebrow">What I'm building</p>
-    <h2>One real project, and a clear next step.</h2>
-    <p>I'd rather show you one thing I actually built well than pad this out with half-finished ones. Here's where things stand.</p>
+  <div class="section-head reveal">
+    <p class="eyebrow">01 — Selected work</p>
+    <h2>Projects with real data, real tests, and a <em>point</em>.</h2>
+    <p>From an ML forecasting pipeline to full-stack apps. Each one taught me something I couldn't have learned from a lecture.</p>
   </div>
-  <div class="work-grid">
-    <article class="project-card">
-      <div class="project-top">
-        <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">Matplotlib</span>
-          <span class="tag">JavaScript</span>
-        </div>
+
+  <!-- Featured -->
+  <article class="feature reveal">
+    <a class="feature-shot" href="https://salevora-forecasting.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open the Salevora live demo">
+      <img src="projects/salevora.jpg" alt="Salevora executive overview dashboard showing revenue KPIs and trend charts" width="1400" height="875" loading="lazy">
+      <span class="shot-badge">Live demo ↗</span>
+    </a>
+    <div class="feature-body">
+      <div class="meta-row">
+        <span class="pill pill-accent">Featured</span>
+        <span class="pill">Machine learning</span>
+        <span class="pill">2026</span>
       </div>
-      <h3>Student Performance Analyzer</h3>
-      <p class="desc">A Python pipeline that processes 1,000 examination records — scoring, grading, ranking top and bottom performers — paired with this interactive browser view of the results.</p>
-      <div class="chart-toggle" role="group" aria-label="Choose chart">
-        <button type="button" data-chart="subjects" aria-pressed="true">Subject averages</button>
-        <button type="button" data-chart="grades" aria-pressed="false">Grade distribution</button>
+      <h3>Salevora — Sales &amp; revenue forecasting</h3>
+      <p>An end-to-end ML project: an XGBoost model forecasts six weeks of daily sales for 856 retail stores, trained on 1,017,209 records and served through a FastAPI backend to a React dashboard with model comparison and SHAP explanations.</p>
+      <dl class="metrics">
+        <div><dt>WAPE</dt><dd>9.09%</dd></div>
+        <div><dt>vs baseline MAE</dt><dd>−7.4%</dd></div>
+        <div><dt>Features</dt><dd>21</dd></div>
+      </dl>
+      <ul class="bullets">
+        <li>Leakage-safe chronological validation on a 42-day holdout of 46,830 store-days</li>
+        <li>Exact Tree SHAP for global and per-store explanations</li>
+        <li>pytest + Playwright tests, GitHub Actions CI, deployed on Vercel</li>
+      </ul>
+      <div class="tags"><span>Python</span><span>XGBoost</span><span>pandas</span><span>FastAPI</span><span>React</span><span>TypeScript</span></div>
+      <div class="card-links">
+        <a class="btn btn-small btn-solid" href="https://salevora-forecasting.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+        <a class="btn btn-small btn-ghost" href="https://github.com/kvvraju24/salevora" target="_blank" rel="noopener noreferrer">Source ↗</a>
       </div>
-      <div id="student-chart" class="chart-wrap" aria-label="Student performance chart"></div>
-      <p id="chart-caption" class="chart-caption"></p>
-      <div class="project-links">
-        <a href="https://github.com/kvvraju24/student-performance-analyzer" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>
-        <a class="data-source" href="#" target="_blank" rel="noopener noreferrer">Sample dataset ↗</a>
+    </div>
+  </article>
+
+  <!-- Grid -->
+  <div class="project-grid">
+
+    <article class="project reveal">
+      <div class="project-art art-fit" aria-hidden="true">
+        <span class="art-big">210</span>
+        <span class="art-small">Indian foods · ICMR–NIN IFCT 2017</span>
+      </div>
+      <div class="project-body">
+        <div class="meta-row"><span class="pill">Full-stack · AI</span><span class="pill pill-muted">Private repo</span></div>
+        <h3>FitAI — Nutrition &amp; fitness coach</h3>
+        <p>A nutrition and training web app built around Indian food: personal calorie and macro targets, a food diary, meal plans with grocery lists, workout plans, progress analytics, and an optional AI coach that logs food from a photo.</p>
+        <ul class="bullets">
+          <li>191 backend tests on SQLite + PostgreSQL, Playwright end-to-end</li>
+          <li>Argon2id auth, HttpOnly cookies, strict CSP, rate limits</li>
+        </ul>
+        <div class="tags"><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>TypeScript</span><span>Tailwind</span><span>Docker</span></div>
+        <div class="card-links"><span class="note">Demo available on request</span></div>
       </div>
     </article>
-    <aside class="next-card">
-      <span class="status">In progress</span>
-      <h3>What I'm learning right now</h3>
-      <ul>
-        <li>Data structures &amp; algorithms — building real fluency, not just passing exams</li>
-        <li>Python for data analysis — pandas, NumPy, real datasets</li>
-        <li>SQL &amp; Power BI, toward a proper data science foundation</li>
-      </ul>
-      <p style="font-size:0.88rem;color:var(--muted);margin-top:auto;">Goal: a strong placement before final year, backed by real project work.</p>
-    </aside>
+
+    <article class="project reveal">
+      <div class="project-art art-desk" aria-hidden="true">
+        <span class="art-big">150</span>
+        <span class="art-small">intents · CLINC150 benchmark</span>
+      </div>
+      <div class="project-body">
+        <div class="meta-row"><span class="pill">ML · Frontend</span><span class="pill">2026</span></div>
+        <h3>ResolveDesk — ML ticket triage</h3>
+        <p>An operations dashboard prototype for routing support tickets with an intent classifier (TF-IDF + logistic regression on CLINC150). Agents tune a confidence threshold to trade automation against misrouting, with a feedback loop for corrections.</p>
+        <div class="tags"><span>React</span><span>TypeScript</span><span>Tailwind</span><span>Motion</span><span>scikit-learn concepts</span></div>
+        <div class="card-links">
+          <a href="https://github.com/kvvraju24/resolvedesk" target="_blank" rel="noopener noreferrer">Source ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project reveal">
+      <div class="project-art art-nut" aria-hidden="true">
+        <span class="art-big">0</span>
+        <span class="art-small">accounts needed · local-first</span>
+      </div>
+      <div class="project-body">
+        <div class="meta-row"><span class="pill">Frontend</span><span class="pill pill-muted">Private repo</span></div>
+        <h3>Nutryxen — Fuel. Train. Transform.</h3>
+        <p>A responsive, local-first fitness dashboard: meals, macros, training volume, rest timer, habits and progress charts — all stored in the browser with JSON export, plus spring-based motion and reduced-motion support.</p>
+        <div class="tags"><span>React</span><span>Vite</span><span>Motion</span><span>Vitest</span></div>
+        <div class="card-links"><span class="note">Demo available on request</span></div>
+      </div>
+    </article>
+
+    <article class="project project-chart reveal">
+      <div class="project-body pc-text">
+        <div class="meta-row"><span class="pill">Data analysis</span><span class="pill">Interactive</span></div>
+        <h3>Student Performance Analyzer</h3>
+        <p>Started as a Python + Matplotlib pipeline over 1,000 exam records — scoring, grading and ranking — and grew into a Django workspace with a normalised SQLite database, CSV reporting and a 5,000-student synthetic demo.</p>
+        <div class="tags"><span>Python</span><span>Django</span><span>SQLite</span><span>Matplotlib</span><span>JavaScript</span></div>
+        <div class="card-links">
+          <a href="https://github.com/kvvraju24/student-performance-analyzer" target="_blank" rel="noopener noreferrer">Source ↗</a>
+          <a class="data-source" href="https://github.com/kvvraju24/student-performance-analyzer/blob/main/output/class_summary.csv" target="_blank" rel="noopener noreferrer">Dataset ↗</a>
+        </div>
+      </div>
+      <div class="pc-chart">
+        <div class="chart-toggle" role="group" aria-label="Choose chart">
+          <button type="button" data-chart="subjects" aria-pressed="true">Subject averages</button>
+          <button type="button" data-chart="grades" aria-pressed="false">Grade distribution</button>
+        </div>
+        <div id="student-chart" class="chart-wrap" aria-label="Student performance chart"></div>
+        <p id="chart-caption" class="chart-caption" aria-live="polite"></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="earlier reveal">
+    <span class="earlier-label">Earlier</span>
+    <p><strong>Male Shopping Website</strong> · Oct 2024 — my first web project: a clothing storefront with category, brand and price filtering, built with HTML and CSS.</p>
   </div>
 </section>
 
 <!-- ============ ABOUT ============ -->
 <section class="section section-alt" id="about">
   <div class="wrap about-grid">
-    <div>
-      <p class="eyebrow">About</p>
-      <h2>Grounded in logic, still learning the tools.</h2>
-      <div class="about-copy" style="margin-top:20px;">
-        <p>I'm <strong>KONETI VISHNUVARDHAN RAJU</strong>, a computer science student at Lovely Professional University, Phagwara. My strength has always been reasoning through a problem in my head — logic puzzles, pattern-spotting, working backward from an answer — rather than leaning on memorized formulas.</p>
-        <p>I'm honest that my programming foundations are still catching up to that instinct. I'm actively closing that gap this year, with data structures, Python, and SQL, aiming at a career in data science.</p>
-        <p><a href="https://www.linkedin.com/in/kvvraju24" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></p>
+    <div class="reveal">
+      <p class="eyebrow">02 — About</p>
+      <h2>Logic first. <em>Then</em> the code.</h2>
+      <div class="about-copy">
+        <p>I'm <strong>Koneti Vishnuvardhan Raju</strong> — Vishnu — a computer science student at Lovely Professional University, Phagwara. My strength has always been reasoning through a problem: logic puzzles, spotting patterns, working backward from an answer instead of leaning on memorised formulas.</p>
+        <p>Over the last year I've turned that instinct into shipped work — a forecasting model that beats a strong baseline, a tested full-stack app, and dashboards that explain their numbers. Now I'm deepening the fundamentals: data structures, statistics and SQL.</p>
+      </div>
+      <div class="now-card">
+        <span class="now-label"><span class="pulse" aria-hidden="true"></span>Learning right now</span>
+        <ul>
+          <li>Data structures &amp; algorithms — real fluency, not just exams</li>
+          <li>Statistics for ML — validation, error metrics, explainability</li>
+          <li>SQL &amp; Power BI for analytics work</li>
+        </ul>
       </div>
     </div>
-    <div>
+    <div class="reveal">
       <div class="skill-tabs" role="tablist" aria-label="Skill areas">
         <button type="button" role="tab" id="tab-data" aria-controls="panel-data" aria-selected="true" tabindex="0">Data</button>
-        <button type="button" role="tab" id="tab-code" aria-controls="panel-code" aria-selected="false" tabindex="-1">Code</button>
         <button type="button" role="tab" id="tab-ml" aria-controls="panel-ml" aria-selected="false" tabindex="-1">ML</button>
+        <button type="button" role="tab" id="tab-code" aria-controls="panel-code" aria-selected="false" tabindex="-1">Code</button>
         <button type="button" role="tab" id="tab-tools" aria-controls="panel-tools" aria-selected="false" tabindex="-1">Tools</button>
       </div>
       <div class="skill-panel" role="tabpanel" id="panel-data" aria-labelledby="tab-data" tabindex="0">
         <h4>Making information useful</h4>
-        <p>Working with datasets, cleaning records, communicating patterns visually.</p>
-        <div class="skill-chips"><span>Pandas</span><span>NumPy</span><span>SQL</span><span>Data cleaning</span><span>Power BI</span><span>Tableau</span><span>Excel</span><span>Matplotlib</span><span>Seaborn</span></div>
-      </div>
-      <div class="skill-panel" role="tabpanel" id="panel-code" aria-labelledby="tab-code" tabindex="0" hidden>
-        <h4>From logic to code</h4>
-        <p>Programming foundations and the languages I use day to day.</p>
-        <div class="skill-chips"><span>Python</span><span>C++</span><span>Java</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span></div>
+        <p>Cleaning and validating datasets, then communicating the patterns visually.</p>
+        <div class="skill-chips"><span>pandas</span><span>NumPy</span><span>SQL</span><span>Data cleaning</span><span>Power BI</span><span>Tableau</span><span>Excel</span><span>Matplotlib</span><span>Seaborn</span><span>Recharts</span></div>
       </div>
       <div class="skill-panel" role="tabpanel" id="panel-ml" aria-labelledby="tab-ml" tabindex="0" hidden>
-        <h4>Building toward modeling</h4>
-        <p>Early but deliberate footing in machine learning fundamentals.</p>
-        <div class="skill-chips"><span>scikit-learn</span><span>Classification</span><span>Regression</span><span>Data preprocessing</span></div>
+        <h4>Models that hold up</h4>
+        <p>Honest validation, sensible baselines, and explanations people can read.</p>
+        <div class="skill-chips"><span>scikit-learn</span><span>XGBoost</span><span>SHAP</span><span>Regression</span><span>Classification</span><span>Time-series validation</span><span>Feature engineering</span></div>
+      </div>
+      <div class="skill-panel" role="tabpanel" id="panel-code" aria-labelledby="tab-code" tabindex="0" hidden>
+        <h4>From logic to software</h4>
+        <p>The languages and frameworks I use to ship.</p>
+        <div class="skill-chips"><span>Python</span><span>C++</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>FastAPI</span><span>Django</span><span>HTML &amp; CSS</span></div>
       </div>
       <div class="skill-panel" role="tabpanel" id="panel-tools" aria-labelledby="tab-tools" tabindex="0" hidden>
         <h4>Everyday workflow</h4>
-        <p>What I use to write, test, and ship things.</p>
-        <div class="skill-chips"><span>Git</span><span>GitHub</span><span>Jupyter Notebook</span><span>Google Colab</span><span>VS Code</span></div>
+        <p>What I use to write, test and deploy.</p>
+        <div class="skill-chips"><span>Git &amp; GitHub</span><span>GitHub Actions</span><span>pytest</span><span>Playwright</span><span>Docker</span><span>PostgreSQL</span><span>MySQL</span><span>Jupyter</span><span>Google Colab</span><span>VS Code</span><span>Vercel</span></div>
       </div>
     </div>
   </div>
@@ -157,10 +277,9 @@
 
 <!-- ============ JOURNEY ============ -->
 <section class="section wrap" id="journey">
-  <div class="section-head">
-    <p class="eyebrow">Journey</p>
+  <div class="section-head reveal">
+    <p class="eyebrow">03 — Journey</p>
     <h2>Education, and the certificates behind it.</h2>
-    <p>Two views on the same timeline — flip the tab to jump between them.</p>
   </div>
 
   <div class="journey-tabs" role="tablist" aria-label="Journey view">
@@ -171,12 +290,21 @@
   <div class="journey-panel" role="tabpanel" id="panel-jrn-education" aria-labelledby="tab-jrn-education" tabindex="0">
     <ol class="timeline">
       <li class="timeline-item">
-        <span class="timeline-dot" aria-hidden="true"></span>
+        <span class="timeline-dot is-live" aria-hidden="true"></span>
         <div class="timeline-card">
           <span class="when">2024 — Present</span>
           <h4>B.Tech in Computer Science</h4>
           <span class="where">Lovely Professional University · Phagwara, Punjab</span>
           <span class="result-badge badge-progress">In progress</span>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-card">
+          <span class="when">Aug 2025</span>
+          <h4>Organiser · Carnival of Joy</h4>
+          <span class="where">Campus event · Lovely Professional University</span>
+          <span class="result-badge badge-soft">Extra-curricular</span>
         </div>
       </li>
       <li class="timeline-item">
@@ -201,21 +329,19 @@
   </div>
 
   <div class="journey-panel" role="tabpanel" id="panel-jrn-certs" aria-labelledby="tab-jrn-certs" tabindex="0" hidden>
-    <p class="cert-intro">Eight, so far — filter by type, then tap any row to open the certificate.</p>
-
     <div class="cert-filters" role="group" aria-label="Filter certificates by category">
-      <button type="button" class="cert-filter active" data-filter="all">All <span>8</span></button>
-      <button type="button" class="cert-filter" data-filter="programming">Programming <span>5</span></button>
-      <button type="button" class="cert-filter" data-filter="soft">Soft skills <span>1</span></button>
-      <button type="button" class="cert-filter" data-filter="industry">Industry <span>2</span></button>
+      <button type="button" class="cert-filter active" data-filter="all" aria-pressed="true">All <span>8</span></button>
+      <button type="button" class="cert-filter" data-filter="programming" aria-pressed="false">Programming <span>5</span></button>
+      <button type="button" class="cert-filter" data-filter="industry" aria-pressed="false">Industry <span>2</span></button>
+      <button type="button" class="cert-filter" data-filter="soft" aria-pressed="false">Soft skills <span>1</span></button>
     </div>
 
     <div class="cert-accordion" id="cert-accordion">
 
       <article class="cert-row" data-category="programming">
         <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-dsa">
+          <span class="cert-when">Sep 2025</span>
           <span class="cert-row-title">
-            <span class="cert-when">Sep 2025</span>
             <span class="cert-row-name">Data Structures &amp; Algorithms in Python</span>
             <span class="cert-row-issuer">Infosys Springboard · Course completion</span>
           </span>
@@ -231,8 +357,8 @@
 
       <article class="cert-row" data-category="programming">
         <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-cpp">
+          <span class="cert-when">Aug 2025</span>
           <span class="cert-row-title">
-            <span class="cert-when">Aug 2025</span>
             <span class="cert-row-name">Programming Using C++</span>
             <span class="cert-row-issuer">Infosys Springboard · Course completion</span>
           </span>
@@ -252,8 +378,8 @@
 
       <article class="cert-row" data-category="industry">
         <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-careclub">
+          <span class="cert-when">Jul 2025</span>
           <span class="cert-row-title">
-            <span class="cert-when">Jul 2025</span>
             <span class="cert-row-name">Cyber Security Awareness — 58 hrs</span>
             <span class="cert-row-issuer">CareClub Foundation · Project</span>
           </span>
@@ -268,9 +394,30 @@
       </article>
 
       <article class="cert-row" data-category="programming">
-        <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-cse">
+        <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-neo">
+          <span class="cert-when">May 2025</span>
           <span class="cert-row-title">
-            <span class="cert-when">Jan 2025</span>
+            <span class="cert-row-name">Computer Programming — 72 hrs</span>
+            <span class="cert-row-issuer">LPU · iamNeo platform</span>
+          </span>
+          <span class="cert-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="cert-detail-wrap">
+          <div class="cert-detail" id="cert-detail-neo" inert>
+            <button class="cert-thumb" type="button" data-img="certificates/NEO_COLAB_CERTIFICATE_C_PROGRAM.png" data-title="Computer Programming — 72 hrs" data-issuer="LPU · iamNeo platform" aria-label="View full certificate: Computer Programming, LPU iamNeo platform">
+              <img src="certificates/NEO_COLAB_CERTIFICATE_C_PROGRAM.png" alt="Computer Programming certificate issued by Lovely Professional University on the iamNeo platform to Vishnu Vardhan Raju Koneti" loading="lazy">
+              <span class="cert-thumb-hint">View full certificate ↗</span>
+            </button>
+            <div class="cert-tags"><span>C programming</span><span>iamNeo</span><span>LPU</span></div>
+            <p class="cert-detail-meta">Verified · Jan – May 2025 course</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cert-row" data-category="programming">
+        <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-cse">
+          <span class="cert-when">Jan 2025</span>
+          <span class="cert-row-title">
             <span class="cert-row-name">C Programming — 18-hr live course</span>
             <span class="cert-row-issuer">CSE Pathshala</span>
           </span>
@@ -288,31 +435,11 @@
         </div>
       </article>
 
-      <article class="cert-row" data-category="programming">
-        <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-neo">
-          <span class="cert-row-title">
-            <span class="cert-when">Jan – May 2025</span>
-            <span class="cert-row-name">Computer Programming — 72 hrs</span>
-            <span class="cert-row-issuer">LPU · iamNeo platform</span>
-          </span>
-          <span class="cert-toggle-icon" aria-hidden="true"></span>
-        </button>
-        <div class="cert-detail-wrap">
-          <div class="cert-detail" id="cert-detail-neo" inert>
-            <button class="cert-thumb" type="button" data-img="certificates/NEO_COLAB_CERTIFICATE_C_PROGRAM.png" data-title="Computer Programming — 72 hrs" data-issuer="LPU · iamNeo platform" aria-label="View full certificate: Computer Programming, LPU iamNeo platform">
-              <img src="certificates/NEO_COLAB_CERTIFICATE_C_PROGRAM.png" alt="Computer Programming certificate issued by Lovely Professional University on the iamNeo platform to Vishnu Vardhan Raju Koneti" loading="lazy">
-              <span class="cert-thumb-hint">View full certificate ↗</span>
-            </button>
-            <div class="cert-tags"><span>C programming</span><span>iamNeo</span><span>LPU</span></div>
-            <p class="cert-detail-meta">Verified</p>
-          </div>
-        </div>
-      </article>
 
       <article class="cert-row" data-category="programming">
         <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-hackerrank">
+          <span class="cert-when">Nov 2024</span>
           <span class="cert-row-title">
-            <span class="cert-when">Nov 2024</span>
             <span class="cert-row-name">Problem Solving (Basic)</span>
             <span class="cert-row-issuer">HackerRank · Skills certification</span>
           </span>
@@ -332,8 +459,8 @@
 
       <article class="cert-row" data-category="industry">
         <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-accenture">
+          <span class="cert-when">Oct 2024</span>
           <span class="cert-row-title">
-            <span class="cert-when">Oct 2024</span>
             <span class="cert-row-name">Developer &amp; Technology Job Simulation</span>
             <span class="cert-row-issuer">Accenture · via Forage</span>
           </span>
@@ -349,8 +476,8 @@
 
       <article class="cert-row" data-category="soft">
         <button type="button" class="cert-row-toggle" aria-expanded="false" aria-controls="cert-detail-skillera">
+          <span class="cert-when">Oct 2024</span>
           <span class="cert-row-title">
-            <span class="cert-when">Oct 2024</span>
             <span class="cert-row-name">Effective Communication Skills</span>
             <span class="cert-row-issuer">Skillera · Appreciation certificate</span>
           </span>
@@ -383,17 +510,19 @@
 </div>
 
 <!-- ============ CONTACT ============ -->
-<section class="contact-band section-alt" id="contact">
-  <div class="wrap contact-inner">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Open to opportunities — even to start small.</h2>
+<section class="contact wrap" id="contact">
+  <div class="contact-card reveal">
+    <p class="eyebrow">04 — Contact</p>
+    <h2>Open to internships and <em>data roles</em> — happy to start small.</h2>
+    <p class="contact-sub">The fastest way to reach me is email. I usually reply within a day.</p>
     <div class="contact-row">
-      <a class="email-link" href="mailto:kvvraju24@gmail.com">kvvraju24@gmail.com</a>
-      <button class="copy-email" type="button">Copy email</button>
-      <div class="social-links">
-        <a href="https://github.com/kvvraju24" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/kvvraju24" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      </div>
+      <a class="btn btn-solid btn-lg" href="mailto:kvvraju24@gmail.com">kvvraju24@gmail.com</a>
+      <button class="btn btn-ghost btn-lg copy-email" type="button">Copy email</button>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/kvvraju24" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/kvvraju24" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="vishnu-raju-cv.pdf" download>Résumé (PDF) ↓</a>
     </div>
   </div>
 </section>
@@ -401,7 +530,7 @@
 </main>
 
 <footer class="site-footer wrap">
-  <span>© 2026 Koneti Vishnuvardhan Raju</span>
+  <span>© <span id="year">2026</span> Koneti Vishnuvardhan Raju</span>
   <a href="#home">Back to top ↑</a>
 </footer>
 

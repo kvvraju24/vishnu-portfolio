@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Koneti Vishnuvardhan Raju — CV</title>
+<!-- Source for ../vishnu-raju-cv.pdf. Rebuild with: node cv/build-cv.js -->
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 210mm; padding: 10mm 14mm 6mm;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.8pt; line-height: 1.3; color: #1a1d24;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 12mm; padding-bottom: 4mm; border-bottom: 1.4pt solid #1a1d24; }
+  h1 { margin: 0; font-size: 21pt; letter-spacing: -0.3pt; line-height: 1.05; }
+  .role { margin-top: 1.5mm; font-size: 10pt; color: #3b55e6; font-weight: 600; }
+  .contact { text-align: right; font-size: 8.8pt; line-height: 1.55; color: #3c414d; }
+  section { margin-top: 3mm; }
+  h2 {
+    margin: 0 0 2mm; font-size: 8.6pt; letter-spacing: 1.4pt; text-transform: uppercase; color: #3b55e6;
+    display: flex; align-items: center; gap: 3mm;
+  }
+  h2::after { content: ""; flex: 1; height: 0.6pt; background: #d9d7cf; }
+  p { margin: 0; }
+  .summary { color: #2b2f38; }
+  .skills { display: grid; grid-template-columns: 30mm 1fr; gap: 0.4mm 4mm; margin: 0; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: #2b2f38; }
+  .item + .item { margin-top: 2mm; }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .item-head h3 { margin: 0; font-size: 10pt; }
+  .item-head h3 span { font-weight: 400; color: #5d6372; }
+  .date { font-size: 8.6pt; color: #5d6372; white-space: nowrap; }
+  .stack { font-size: 8.4pt; color: #5d6372; margin-top: 0.3mm; }
+  ul { margin: 1mm 0 0; padding-left: 4.2mm; }
+  li { margin-top: 0.5mm; }
+  li::marker { color: #3b55e6; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8mm; }
+  .certs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8mm 8mm; }
+  .edu { display: grid; grid-template-columns: 1fr; gap: 1.2mm; }
+  .edu .item + .item { margin-top: 0; }
+  .list-row { display: flex; justify-content: space-between; gap: 4mm; }
+  
+  .muted { color: #5d6372; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>KONETI VISHNUVARDHAN RAJU</h1>
+    <div class="role">Aspiring Data Scientist · B.Tech Computer Science, LPU</div>
+  </div>
+  <div class="contact">
+    <div><a href="mailto:kvvraju24@gmail.com">kvvraju24@gmail.com</a></div>
+    <div><a href="https://www.linkedin.com/in/kvvraju24">linkedin.com/in/kvvraju24</a></div>
+    <div><a href="https://github.com/kvvraju24">github.com/kvvraju24</a></div>
+  </div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">Third-year computer science student focused on data science and machine learning. I build end-to-end projects — from data cleaning and feature engineering to tested APIs and dashboards — with honest evaluation and explainable results.</p>
+</section>
+
+<section class="edu-sec">
+  <h2>Education</h2>
+  <div class="edu">
+  <div class="item">
+    <div class="item-head"><h3>Lovely Professional University <span>· Phagwara, Punjab</span></h3><span class="date">Aug 2024 – Present</span></div>
+    <div class="stack">Bachelor of Technology in Computer Science (Core) · CGPA 5.51</div>
+  </div>
+  <div class="item">
+    <div class="item-head"><h3>Sri Chaitanya Junior College <span>· Vijayawada, Andhra Pradesh</span></h3><span class="date">2022 – 2024</span></div>
+    <div class="stack">Intermediate — MPC · 82.4%</div>
+  </div>
+  <div class="item">
+    <div class="item-head"><h3>Narayana CBSE High School <span>· Nellore, Andhra Pradesh</span></h3><span class="date">2021 – 2022</span></div>
+    <div class="stack">Secondary Education · 84.8%</div>
+  </div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Programming</dt><dd>Python, SQL, C++, Java, JavaScript, TypeScript</dd>
+    <dt>Data Science</dt><dd>pandas, NumPy, Matplotlib, Seaborn, data cleaning &amp; validation</dd>
+    <dt>Machine Learning</dt><dd>scikit-learn, XGBoost, SHAP, regression, classification, feature engineering, time-series validation</dd>
+    <dt>Visualization</dt><dd>Power BI, Tableau, Excel, Recharts</dd>
+    <dt>Web &amp; Backend</dt><dd>FastAPI, Django, React, HTML, CSS, Tailwind CSS</dd>
+    <dt>Databases</dt><dd>MySQL, PostgreSQL, SQLite</dd>
+    <dt>Tools</dt><dd>Git, GitHub Actions, pytest, Playwright, Docker, Jupyter Notebook, Google Colab, VS Code</dd>
+    <dt>Soft Skills</dt><dd>Problem solving, fast learning, team collaboration, communication</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="item">
+    <div class="item-head"><h3>Salevora — Sales &amp; Revenue Forecasting <span>· salevora-forecasting.vercel.app</span></h3><span class="date">2026</span></div>
+    <div class="stack">Python, pandas, scikit-learn, XGBoost, SHAP, FastAPI, React, TypeScript, Recharts</div>
+    <ul>
+      <li>XGBoost model forecasting six weeks of daily sales for 856 stores, trained on 1M+ records with 21 engineered features.</li>
+      <li>9.09% WAPE on a 42-day chronological holdout; 7.4% lower MAE and 10.8% lower RMSE than a strong baseline.</li>
+      <li>FastAPI backend and six-page React dashboard with model comparison and SHAP explanations; tested in CI.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>FitAI — Nutrition &amp; Fitness Web App</h3><span class="date">2026</span></div>
+    <div class="stack">FastAPI, SQLAlchemy, PostgreSQL, React, TypeScript, Tailwind CSS, Docker</div>
+    <ul>
+      <li>Full-stack app for Indian diets: calorie/macro targets, food diary of 210 ICMR–NIN foods, meal and workout plans, progress tracking.</li>
+      <li>AI coach that logs food from a photo; Argon2id auth, strict CSP, rate limits; 191 backend tests.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>Student Performance Analyzer</h3><span class="date">2025 – 2026</span></div>
+    <div class="stack">Python, Matplotlib, Django, SQLite, JavaScript</div>
+    <ul>
+      <li>Scored, graded and ranked 1,000 exam records, then grew it into a Django workspace with SQLite, CSV reports and a dashboard.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>ResolveDesk — ML Ticket Triage Dashboard</h3><span class="date">2026</span></div>
+    <div class="stack">React, TypeScript, Tailwind CSS</div>
+    <ul>
+      <li>Ticket-routing dashboard prototype: CLINC150 intent classifier (TF-IDF + logistic regression) with confidence-threshold gating.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>Nutryxen — Local-first Fitness Dashboard</h3><span class="date">2026</span></div>
+    <div class="stack">React, Vite, Motion</div>
+    <ul>
+      <li>Responsive tracker for meals, macros, training and habits, stored in the browser with JSON export.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <div class="certs">
+    <div class="list-row"><span>DSA in Python — Infosys Springboard</span><span class="date">Sep 2025</span></div>
+    <div class="list-row"><span>C Programming — CSE Pathshala</span><span class="date">Jan 2025</span></div>
+    <div class="list-row"><span>Programming in C++ — Infosys Springboard</span><span class="date">Aug 2025</span></div>
+    <div class="list-row"><span>Problem Solving (Basic) — HackerRank</span><span class="date">Nov 2024</span></div>
+    <div class="list-row"><span>Cyber Security Awareness — CareClub</span><span class="date">Jul 2025</span></div>
+    <div class="list-row"><span>Developer Job Simulation — Accenture</span><span class="date">Oct 2024</span></div>
+    <div class="list-row"><span>Computer Programming — LPU · iamNeo</span><span class="date">May 2025</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Achievements &amp; Activities</h2>
+  <div class="list-row"><span>Industry certifications in AI and DSA from Oracle and Infosys Springboard</span><span class="date">Sep 2025 – Jun 2026</span></div>
+  <div class="list-row" style="margin-top:0.8mm"><span>Organised the “Carnival of Joy” event at Lovely Professional University</span><span class="date">Aug 2025</span></div>
+</section>
+
+
+</body>
+</html>
